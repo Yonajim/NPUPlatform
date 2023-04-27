@@ -1,0 +1,98 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7251
+        }
+      ],
+      "UpstreamPathTemplate": "/npusearch/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "NpuSearchService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7266
+        }
+      ],
+      "UpstreamPathTemplate": "/npuscore/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "NpuScoreService" 
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7131
+        }
+      ],
+      "UpstreamPathTemplate": "/npucreation/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "NpuCreationService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7006
+        }
+      ],
+      "UpstreamPathTemplate": "/auth/api/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "AuthenticationService" 
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "NpuSearchService",
+      "Config": [
+        {
+          "Name": "NpuSearchService API",
+          "Version": "v1",
+          "Url": "https://localhost:7251/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "NpuScoreService",
+      "Config": [
+        {
+          "Name": "NpuScoreService API",
+          "Version": "v1",
+          "Url": "https://localhost:7266/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "NpuCreationService",
+      "Config": [
+        {
+          "Name": "NpuCreationService API",
+          "Version": "v1",
+          "Url": "https://localhost:7131/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "AuthenticationService",
+      "Config": [
+        {
+          "Name": "AuthenticationService API",
+          "Version": "v1",
+          "Url": "https://localhost:7006/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
